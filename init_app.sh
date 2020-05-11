@@ -74,7 +74,8 @@ if [ $comprobacion -eq 0 ];
                                 if [ $? -eq 0  ]
                                     then
                                             git clone https://github.com/cdmzero/english_academy.git src
-                                            chmod -R 777 src/ .env
+                                            chmod -R 777 src/ env
+                                            cp env .env
                                             echo ""
                                             docker-compose stop > /dev/null 2>&1
                                             docker-compose start
