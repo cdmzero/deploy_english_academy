@@ -1,12 +1,5 @@
-# Sintaxis
-Diagrama:
+# How to
 
-
-En el anexo II se muestra la configuración interna de los componentes descritos en el diagrama además de una demo de funcionamiento*
-
-
-
-Anfitrión:
 
 Para poder comenzar con el despliegue de la APP necesitamos tener instalador los paquetes / programas de Docker y Github que indico a continuación dependiendo de tu SO.
 
@@ -102,6 +95,7 @@ lora@lora.com
 
 pruebaprueba
   
+# Sintaxis
 
 Shell Script:
 
@@ -162,7 +156,7 @@ version: '3.1'
 	    ports:
 	      - "3306:3306"
 	    environment: #Aqui definimos las variables de entorno asociados a este conotenedor mysql
-	    #Estos parámetros coinciden a su vez archivo .env de laravel también
+	    #Estos parámetros a su vez, coinciden con el archivo .env interno de laravel 
 	      MYSQL_DATABASE: laravel_master
 	      MYSQL_USER: homestead
 	      MYSQL_PASSWORD: secret
@@ -213,7 +207,7 @@ RUN docker-php-ext-install pdo pdo_mysql #Instalamos las extensiones necesarias 
 
 
 
-Para que funcione todo correctamente y el servidor web atienda peticiones de clientes y por debajo trabaje con PHP debemos añadir estas líneas al archivo default de nginx previamente declarado en el volumen del servicio de NGINX
+Para que funcione todo correctamente y el servidor web atienda peticiones de clientes y por debajo trabaje con PHP debemos añadir estas líneas al archivo default de nginx previamente declarado en el volumen montando de NGINX
 
 /nginx/default.conf
 
