@@ -162,7 +162,7 @@ version: '3.1'
 	    ports:
 	      - "3306:3306"
 	    environment: #Aqui definimos las variables de entorno asociados a este conotenedor mysql
-#Estos parámetros coinciden a su vez archivo .env de laravel también
+	    #Estos parámetros coinciden a su vez archivo .env de laravel también
 	      MYSQL_DATABASE: laravel_master
 	      MYSQL_USER: homestead
 	      MYSQL_PASSWORD: secret
