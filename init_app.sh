@@ -70,6 +70,7 @@ if [ $comprobacion -eq 0 ];
                         if [ $ping -eq 0 ]
                         echo "Arrancando entorno para implementar la aplicacion:";
                         then
+                            docker rm $(docker ps -qa) > /dev/null 2>&1
                             docker-compose up --build -d
                                 if [ $? -eq 0  ]
                                     then
@@ -151,6 +152,7 @@ if [ $comprobacion -eq 0 ];
                 then
                     docker-compose kill
                     docker-compose down
+                    docker rm $(docker ps -qa)
                 else
                 echo " No hay nada que eliminar "
                 fi
