@@ -19,6 +19,10 @@ if [ $comprobacion -eq 0 ];
     while :
         do
             clear
+                echo ""
+                echo "Docker Ver____ ${docv:15} "
+                echo "Github Ver____ ${gitv:12} " 
+                echo "" 
                 echo "________________________________________________________" 
                 echo "________________________________________________________" 
                 echo ""
@@ -40,10 +44,20 @@ if [ $comprobacion -eq 0 ];
                 echo "________________________________________________________" 
                 echo "________________________________________________________" 
                 echo ""
+                echo "PHP My Admin | localhost:8181"
                 echo ""
-                echo "Docker Ver____ ${docv:15} "
-                echo "Github Ver____ ${gitv:12} " 
-                echo "" 
+                echo "User: root"
+                echo "Pass: secret"
+                echo ""
+                echo "App English | localhost:8080"
+                echo ""
+                echo "Admin"
+                echo "User: jose@jose.com"
+                echo "Pass: pruebaprueba"
+                echo ""
+                echo "Teacher"
+                echo "User: lora@lora.com"
+                echo "Pass: pruebaprueba"
                 echo ""
                 echo -n "Seleccione una opcion [1 - 5] -----> "
                 read opcion
@@ -74,6 +88,8 @@ if [ $comprobacion -eq 0 ];
                             docker-compose up --build -d
                                 if [ $? -eq 0  ]
                                     then
+                                    echo ""
+                                    echo ""
                                             git clone https://github.com/cdmzero/english_academy.git src
                                             chmod -R 777 src/ env
                                             cp env .env
@@ -152,7 +168,7 @@ if [ $comprobacion -eq 0 ];
                 then
                     docker-compose kill
                     docker-compose down
-                    docker rm $(docker ps -qa)
+                  
                 else
                 echo " No hay nada que eliminar "
                 fi
