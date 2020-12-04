@@ -13,7 +13,7 @@ services:
       # En el archivo nginx/default esta declarado conjuntamente por este puerto en especifico
     volumes:
       - ./src:/var/www/html
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d
     depends_on:
       - php
       - mysql
